@@ -586,7 +586,7 @@ GameObject:
   - component: {fileID: 410529292}
   - component: {fileID: 410529294}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -604,8 +604,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568bfba3dfcc49544ba48211a5569d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor_de_carteira: 0
-  level: 0
   inputText: {fileID: 1424293223}
   valor_de_carteira_UI: {fileID: 317743979}
 --- !u!4 &410529293
