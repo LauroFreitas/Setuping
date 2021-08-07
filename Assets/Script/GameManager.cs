@@ -8,6 +8,24 @@ public class GameManager : MonoBehaviour
     public InputField inputText;
     public Text valor_de_carteira_UI;
 
+    #region SIngleton:Game
+
+    public static GameManager Instance;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    #endregion
 
     private void Start()
     {
