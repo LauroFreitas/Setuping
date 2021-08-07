@@ -10,9 +10,11 @@ public class PlayerData
 {
     public float valor_de_carteira;
     public int level;
+   // public ItenShop iten;
     public PlayerData(Player player)
     {
         this.valor_de_carteira = player.valor_de_carteira;
         this.level = player.level;
+       // this.iten = player.iten;
     }
 }

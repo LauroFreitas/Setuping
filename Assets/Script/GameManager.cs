@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public InputField inputText;
     public Text valor_de_carteira_UI;
 
-
     private void Start()
     {
         valor_de_carteira_UI.text = FindObjectOfType<Player>().valor_de_carteira.ToString();

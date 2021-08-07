@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
     public float valor_de_carteira = 0;
     public int level = 0;
+    //public ItenShop iten = null;
     
 
 }
