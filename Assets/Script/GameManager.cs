@@ -19,7 +19,12 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<Player>().valor_de_carteira = float.Parse(inputText.text.ToString());
         Debug.Log(FindObjectOfType<Player>().valor_de_carteira);
     }
-
+    public void RemoverSaldo(float valor)
+    {
+        FindObjectOfType<Player>().valor_de_carteira -= valor;
+        SaveGame();
+        valor_de_carteira_UI.text = FindObjectOfType<Player>().valor_de_carteira.ToString();
+    }
 
 
     public void SaveGame()
