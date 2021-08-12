@@ -5,7 +5,7 @@ public class DragAndDrop : MonoBehaviour
     public float a;
     public GameObject objectHit;
     public GameObject obj;
-    bool ativo = true;
+    public static  bool ativo = true;
 
     void Update()
     {
@@ -20,24 +20,25 @@ public class DragAndDrop : MonoBehaviour
                         
                     if (hit.transform.gameObject.GetComponent<ObjectInteraction>() == true && ativo == true)
                     {
-                    Debug.Log("SDASD");
-
-                    objectHit = hit.transform.gameObject;
-                    // Debug.Log(hit.point);
-                    Debug.DrawLine(ray.origin, hit.point);
-                    ativo = false;
+                        objectHit = hit.transform.gameObject;
+                        Debug.DrawLine(ray.origin, hit.point);
+                        ativo = false;
                     }
 
-                    obj.transform.position = new Vector3(hit.point.x, 0, hit.point.z);
-                    objectHit.transform.position = obj.transform.position;
-                    Debug.Log(obj.transform.position);
+                    if(objectHit != null)
+                    {
+                        obj.transform.position = new Vector3(hit.point.x, 0, hit.point.z);
+                        objectHit.transform.position = obj.transform.position;
+                        Debug.Log(obj.transform.position);
+                    }
                 }
             }
            
         }
         else
         {
-           // ativo = true;
+            objectHit = null;
+            ativo = true;
         }
             
     }
