@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class ObjectInteraction : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject obj;
+    
+    public void VirarObj()
     {
-        
+        obj.transform.Rotate(0,30,0);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
