@@ -10,9 +10,10 @@ public class ItenDisplay : MonoBehaviour
     public Image imagm;
     public Text cost;
 
+
     private void Start()
     {
-        descricao.text = iten.descisao;
+        //descricao.text = iten.descisao;
         imagm.sprite = iten.imagemIten;
         cost.text = iten.valor.ToString();
     }
