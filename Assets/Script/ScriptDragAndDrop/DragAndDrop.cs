@@ -3,6 +3,7 @@
 public class DragAndDrop : MonoBehaviour
 {
     public float a;
+    public float y;
     public GameObject objectHit;
     public GameObject obj;
     public static  bool ativo = true;
@@ -27,7 +28,7 @@ public class DragAndDrop : MonoBehaviour
 
                     if(objectHit != null)
                     {
-                        obj.transform.position = new Vector3(hit.point.x, 0, hit.point.z);
+                        obj.transform.position = new Vector3(hit.point.x, y, hit.point.z);
                         objectHit.transform.position = obj.transform.position;
                         Debug.Log(obj.transform.position);
                     }

@@ -8,9 +8,10 @@ using UnityEngine.UI;
 
 public class ItenShop : ScriptableObject
 {
+
     public int Id;
     public string descisao;
     public Sprite imagemIten;
     public float valor;
-
+    public string hash;
 }
